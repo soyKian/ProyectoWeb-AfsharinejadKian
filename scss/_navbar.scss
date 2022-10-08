@@ -1,0 +1,166 @@
+/************************************/
+
+/*NAV*/
+
+/************************************/
+
+
+.uno {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #imglogo {
+        width: 500px;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 16px 32px;
+
+    img {
+        width: 10%;
+        float: left;
+    }
+
+    a {
+        font-family: badfont;
+        text-decoration: none;
+        color: whitesmoke;
+        padding-right: 5%;
+        font-size: 25px;
+        text-shadow: 10px 2px 8px black;
+    }
+
+    a:hover {
+        color: rgba(245, 245, 245, 0.603);
+    }
+
+    li {
+        display: inline;
+    }
+
+    ul.navlinks {
+        width: 456px;
+    }
+
+}
+
+
+
+/************************************/
+
+/*NAV RESPONSIVE*/
+
+/************************************/
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#hamburger-input {
+    display: none;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 23px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cabin', Sans-serif;
+    background: linear-gradient(to bottom,
+            white, white 20%,
+            rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 40%,
+            white 40%, white 60%,
+            rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%,
+            white 80%, white 100%);
+
+    #sidebar-menu {
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        height: 200vw;
+        background-color: rgba(0, 0, 0, 0.95);
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #sidebar-menu ul {
+        display: grid;
+    }
+
+    p {
+        color: white;
+        font-size: 15vw;
+    }
+
+    ul {
+        padding-left: 0px;
+        padding-top: 10vw;
+    }
+
+    li {
+        list-style-type: none;
+        line-height: 3rem;
+    }
+
+    a {
+        color: white;
+        font-size: 8vw;
+        text-decoration: none;
+
+        padding-right: 0px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+
+}
+
+
+#hamburger-input:checked+#hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+
+#hamburger-input:checked~.overlay {
+    visibility: visible;
+    opacity: 0.4;
+}
+
+
+@media screen and (max-width: 768px) {
+    #main-menu {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: inline;
+    }
+}

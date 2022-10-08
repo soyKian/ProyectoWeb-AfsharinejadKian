@@ -1,0 +1,38 @@
+/************************************/
+
+/* Fuentes */
+
+/************************************/
+
+$fontbad: 'badfont';
+$fontsocial: 'socialmedia';
+$fontnexa: 'nexabold';
+
+
+/************************************/
+
+/* Colores */
+
+/************************************/
+
+
+
+$mainTextColor: whitesmoke;
+$mainShadow: 10px 2px 8px black;
+
+/************************************/
+
+/* Mixins */
+
+/************************************/
+
+@mixin texto ($fuente, $colorfuente, $alineado, $sombra){
+    font-family: $fuente;
+    color: $colorfuente;
+    text-align: $alineado;
+    text-shadow: $sombra;
+}
+
+/* llamar con: @include texto(fuente,colorfuente,alineado de texto, sombra) */
+
+

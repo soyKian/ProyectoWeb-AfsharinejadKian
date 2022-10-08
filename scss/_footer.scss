@@ -1,0 +1,47 @@
+/************************************/
+
+/* FOOTER */
+
+/************************************/
+
+
+footer {
+    background-color: rgba(0,0,0,.8);
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    margin-top:auto;
+    display: flex;
+    ul{
+        margin: 0 auto;
+        padding-left: 0px;
+    }
+    li{
+        float: left;
+        list-style-type: none;
+        padding-right: 10px;
+    }
+    a{
+        font-family: $fontsocial;
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+    }
+}
+
+.instagram:hover{
+    color:purple;
+}
+  
+.twitter:hover{
+    color:cyan;
+}
+
+.youtube:hover{
+    color:red;
+}
+
+.soundcloud:hover{
+    color:orange;
+}
+
+
